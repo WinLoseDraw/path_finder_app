@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path_finder_app/controllers/control_panel_controller.dart';
 import 'package:provider/provider.dart';
@@ -21,9 +22,20 @@ class _GridWidgetState extends State<GridWidget> {
       aspectRatio: 1,
       child: Consumer<ControlPanelController>(
           builder: (context, controller, child) {
-        return Container(
+        return !kIsWeb? Container(
           padding: EdgeInsets.all(2.0),
           width: double.infinity,
+          child: Column(
+            children: [
+              for (List<GridCell> row in controller.grid)
+                Row(
+                  children: row,
+                ),
+            ],
+          ),
+        ) : Container(
+          padding: EdgeInsets.all(2.0),
+          height: double.infinity,
           child: Column(
             children: [
               for (List<GridCell> row in controller.grid)

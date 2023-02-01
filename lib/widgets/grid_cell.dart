@@ -10,7 +10,7 @@ class GridCell extends StatefulWidget {
   double f = 0;
   int g = 0;
   double h = 0;
-  GridCell? parent = null;
+  GridCell? parent;
   CellStatus status = CellStatus.inactive;
 
   GridCell({Key? key, required this.xCoOrdinate, required this.yCoOrdinate})
@@ -59,7 +59,7 @@ class _GridCellState extends State<GridCell> {
                         : widget.status == CellStatus.invalid
                             ? Colors.red
                             : widget.status == CellStatus.current
-                                ? Colors.black
+                                ? Colors.cyanAccent
                                 : widget.status == CellStatus.path
                                     ? Colors.yellow
                                     : Colors.white,
