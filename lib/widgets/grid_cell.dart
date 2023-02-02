@@ -49,7 +49,7 @@ class _GridCellState extends State<GridCell> {
               }
             },
             child: Container(
-              margin: EdgeInsets.all(1.0),
+              margin: EdgeInsets.all(0.5),
               decoration: BoxDecoration(
                 color: (widget.status == CellStatus.start ||
                         widget.status == CellStatus.visited)

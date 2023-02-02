@@ -97,6 +97,9 @@ class _PathFinderPageState extends State<PathFinderPage> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 20.0,
+              )
             ],
           ),
         ),

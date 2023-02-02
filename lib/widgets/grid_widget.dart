@@ -24,6 +24,7 @@ class _GridWidgetState extends State<GridWidget> {
           builder: (context, controller, child) {
         return !kIsWeb? Container(
           padding: EdgeInsets.all(2.0),
+          color: Colors.black26,
           width: double.infinity,
           child: Column(
             children: [
@@ -35,6 +36,7 @@ class _GridWidgetState extends State<GridWidget> {
           ),
         ) : Container(
           padding: EdgeInsets.all(2.0),
+          color: Colors.black26,
           height: double.infinity,
           child: Column(
             children: [
